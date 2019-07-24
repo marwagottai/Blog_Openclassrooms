@@ -1,0 +1,19 @@
+<div class="list-group">
+    <div [ngClass]="{ 'list-group-item': true,
+    'list-group-item-success': getscore() > 0,
+    'list-group-item-danger': getscore() < 0 } ">
+
+        <div class="d-flex w-100 justify-content-between">
+           <h5 class="mb-1">{{BlogName}}</h5>
+           <small>{{BlogDateC | date: 'short' }}</small>
+        </div>
+
+        <p class="mb-1">{{BlogContent}}</p>
+
+        <div>
+            <button class=" btn btn-success" (click)="loveIt()"> LOve It</button>
+            <button class=" btn btn-danger" (click)="DntloveIt()"> Don't LOve It</button>
+        </div>
+        
+    </div>
+</div>
